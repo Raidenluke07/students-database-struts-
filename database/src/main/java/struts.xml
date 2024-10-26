@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="student" namespace="/" extends="struts-default">
+
+      
+
+        <!-- Student Management Actions -->
+        <action name="addStudent" class="com.AddStudentAction">
+            <result name="success">/studentAdded.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+
+        <action name="editStudent" class="com.EditStudentAction">
+            <result name="success">/editStudent.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+
+        <action name="updateStudent" class="com.EditStudentAction" method="update">
+            <result name="success">/studentUpdated.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+
+        <action name="deleteStudent" class="com.DeleteStudentAction">
+            <result name="success">/studentDeleted.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+
+      
+                    <action name="display" class="com.DisplayStudentAction">
+            <result name="success">/studentList.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        
+        <!-- Login Action -->
+        <action name="login" class="com.LoginAction">
+            <result name="success">/studentList.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        <action name="logout" class="com.LogoutAction">
+            <result name="success">/logout.jsp</result>
+        </action>
+
+    </package>
+</struts>
